@@ -1,6 +1,10 @@
 import Card from './card.tsx';
 
-export default function Main() {
+type MainScreenProps = {
+  placesFound: number;
+}
+
+export default function Main({placesFound}: MainScreenProps) {
   return(
     <div className="page page--gray page--main">
       <header className="header">
@@ -74,7 +78,7 @@ export default function Main() {
           <div className="cities__places-container container">
             <section className="cities__places places">
               <h2 className="visually-hidden">Places</h2>
-              <b className="places__found">312 places to stay in Amsterdam</b>
+              <b className="places__found">{placesFound} places to stay in Amsterdam</b>
               <form className="places__sorting" action="#" method="get">
                 <span className="places__sorting-caption">Sort by</span>
                 <span className="places__sorting-type" tabIndex={0}>

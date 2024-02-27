@@ -1,6 +1,11 @@
 import Main from './main';
-export default function App() {
+
+type AppScreenProps = {
+  placesFound: number;
+}
+
+export default function App({placesFound}: AppScreenProps) {
   return (
-    <Main />
+    <Main placesFound={placesFound}/>
   );
 }
