@@ -1,4 +1,4 @@
-import Card from './card.tsx';
+import Card from '../components/card.tsx';
 
 type MainScreenProps = {
   placesFound: number;

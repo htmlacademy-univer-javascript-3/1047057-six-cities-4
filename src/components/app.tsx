@@ -1,4 +1,4 @@
-import Main from './main';
+import Main from '../pages/main';
 
 type AppScreenProps = {
   placesFound: number;
