@@ -18,9 +18,9 @@ export default function App({placesFound}: AppScreenProps) {
         <Route path="/">
           <Route index element={<Main placesFound={placesFound}/>} />
           <Route path="login" element={<Login />} />
-          <Route path="favorites" element={<Favorites />} />
+          <Route path="favorites" element={<PrivateRoute authStatus={AuthStatus.NoAuth}><Favorites /></PrivateRoute>} />
           <Route path="offer/">
-            <Route path=":id" element={<PrivateRoute authStatus={AuthStatus.NoAuth}><Offer/></PrivateRoute>} />
+            <Route path=":id" element={<Offer/>} />
           </Route>
         </Route>
         <Route path="*" element={<NotFound/>}/>
